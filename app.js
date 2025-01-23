@@ -1,5 +1,5 @@
 let listaAmigos = [];
-
+//agregar amigo a la lista
 function agregarAmigo() {
     let amigo = document.getElementById('amigo').value;
     if(amigo == '') {
@@ -24,7 +24,7 @@ function agregarAmigo() {
         }
     }   
 }
-
+//sortear ganador
 function sortearAmigo() {
     if(listaAmigos == 0){
         alert('No hay amigos en la lista');
@@ -39,9 +39,7 @@ function sortearAmigo() {
         reiniciarJuego();
     }
 }
-
-
-
+//Verificar si la lista esta vacia
 function verificarLista(){
     if (listaAmigos.length === 0){
     let li = document.createElement('li');
@@ -51,7 +49,7 @@ function verificarLista(){
     return false;
     }
 }
-
+//Reiniciar juego
 function reiniciarJuego(){
     listaAmigos = [];
     limpiarAmigos();
