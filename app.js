@@ -15,17 +15,20 @@ function agregarAmigo() {
         limpiarInput();
         limpiarAmigos();
         limpiarResultado();
-            listaAmigos.forEach((nombre) =>{
-                let li = document.createElement('li');
-                li.textContent = nombre;
-                document.getElementById('listaAmigos').appendChild(li);
-            });   
+
+        for(let nombre of listaAmigos){
+            let li = document.createElement('li');
+            li.textContent = nombre;
+            document.getElementById('listaAmigos').appendChild(li);
+            
+        }
     }   
 }
 
 function sortearAmigo() {
     if(listaAmigos == 0){
         alert('No hay amigos en la lista');
+        return;
     }else{
         limpiarAmigos();
         let amigoSorteado = listaAmigos[Math.floor(Math.random() * listaAmigos.length)];
@@ -56,14 +59,7 @@ function reiniciarJuego(){
 
 }
 
-function eventoEnter() {
-    document.getElementById('amigo').addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') {
-            agregarAmigo();
-        }
-    });
-}
-
+//Limpiar textos
 function limpiarAmigos() {
     document.getElementById('listaAmigos').innerHTML = '';
 }
@@ -77,5 +73,13 @@ function limpiarResultado(){
     document.getElementById('resultado').innerHTML = '';
 }
 
+//eventos
+document.getElementById('amigo').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        agregarAmigo();
+    }
+});
+
+
+
 verificarLista();
-eventoEnter();
