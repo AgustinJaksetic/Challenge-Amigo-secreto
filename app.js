@@ -29,7 +29,7 @@ function sortearAmigo() {
     }else{
         limpiarAmigos();
         let amigoSorteado = listaAmigos[Math.floor(Math.random() * listaAmigos.length)];
-        document.getElementById('resultado').innerHTML = '';
+        limpiarResultado();
         let li = document.createElement('li');
         li.textContent = `Tu amigo secreto es: ${amigoSorteado}`;
         document.getElementById('resultado').appendChild(li);
