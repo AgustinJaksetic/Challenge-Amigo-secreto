@@ -15,11 +15,11 @@ function agregarAmigo() {
         limpiarInput();
         limpiarAmigos();
         limpiarResultado();
-        for (let i = 0; i < listaAmigos.length; i++) {
-            let li = document.createElement('li');
-            li.textContent = listaAmigos[i];
-            document.getElementById('listaAmigos').appendChild(li);
-        }
+            listaAmigos.forEach((nombre) =>{
+                let li = document.createElement('li');
+                li.textContent = nombre;
+                document.getElementById('listaAmigos').appendChild(li);
+            });   
     }   
 }
 
