@@ -14,7 +14,7 @@
     <main class="main-content">
         <header class="header-banner">
             <h1 class="main-title">Amigo Secreto</h1>
-            <img src="assets/amigo-secreto.png" alt="Imagen representativa de amigo secreto">
+            <img class="main-image" src="assets/amigo-secreto.png" alt="Imagen representativa de amigo secreto">
         </header>
         
         <section class="input-section">
@@ -31,11 +31,12 @@
                 <button class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
                     <img src="assets/play_circle_outline.png" alt="Ícono para sortear">
                     Sortear amigo
+                <button id="ButtonLimpiar" class="button-volver" onclick="reiniciarJuego()" aria-label="Sortear amigo secreto" disabled>   
+                Limpiar Lista
                 </button>
             </div>
         </section>
     </main>
-
     <script src="app.js" defer></script>
 </body>
 </html>

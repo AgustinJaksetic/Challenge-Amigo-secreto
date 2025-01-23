@@ -6,6 +6,7 @@
     --color-button-hover: #e55720;
     --color-text: #444444;
     --color-white: #FFFFFF;
+    --color-button-disabled: #363636;
 }
 
 /* Estilos generales */
@@ -21,6 +22,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.main-image {
+    width: 30%;
+    height: auto;
+    margin: right;
+    filter: drop-shadow(20px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .main-content {
@@ -134,6 +142,14 @@ ul {
     margin: 20px 0;
 }
 
+.name-list {
+    border: #000 solid 1px;
+    border-radius: 25px;
+    padding: 10px 20px;
+    text-align: center;
+    color: var(--color-text);
+}
+
 .result-list {
     margin-top: 15px;
     color: #05DF05;
@@ -160,3 +176,27 @@ ul {
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
+
+.button-volver {
+    display: flex;
+    margin-inline: auto;
+    width: 50%;
+    padding: 5px 40px;
+    color: var(--color-white);
+    background-color: var(--color-button);
+    font-size: 16px;
+}
+.button-volver:hover {
+    cursor: pointer;
+    background-color: var(--color-button-hover);
+}
+
+.button-volver:disabled {
+    background-color: var(--color-button-disabled);
+}
+
+.button-volver:disabled:hover {
+    background-color: var(--color-button-disabled);
+    cursor: not-allowed; 
+}
+
