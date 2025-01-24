@@ -1,7 +1,8 @@
 let listaAmigos = [];
 //agregar amigo a la lista
 function agregarAmigo() {
-    let amigo = document.getElementById('amigo').value;
+    let amigo = document.getElementById('amigo').value.trim().toLowerCase();
+    amigo = amigo.replace(/[^a-z0-9\s]/gi, '');
     if(amigo == '') {
         alert("El nombre no puede estar vacio.")
         return;
